@@ -370,6 +370,7 @@
 	.row-home .media .pull-right {float: none; width: auto; margin: 0;}
 	.row-home .media-body  {margin-top: 20px; padding-left: 0;}
 	.media-header-big {font-size: 35px;}
+	.smaller-text{font-size: smaller !important}
 	/* Accomodation */
 	.md-accomodation .row .grid_4 {margin-bottom: 25px;}
 	.md-accomodation .row {margin-bottom: 0;}
