@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US " ng-app="myApp" ng-controller="myCtrl">
 
 <head>
 	<meta charset="UTF-8" />
@@ -7,14 +7,14 @@
 		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="http://demo.awethemes.com/flawleshotel/xmlrpc.php" />
-	<title>Contact | Royalhotel</title>
+	<title>Contact | Royalehotel</title>
 	<!-- wordpress head functions -->
 	<!-- end of wordpress head -->
 	<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> <![endif]-->
-	<link rel="alternate" type="application/rss+xml" title="Royalhotel &raquo; Feed" href="feed/feed.html" />
-	<link rel="alternate" type="application/rss+xml" title="Royalhotel &raquo; Comments Feed"
+	<link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Feed" href="feed/feed.html" />
+	<link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Comments Feed"
 		href="comments/feed/feed.html" />
-	<link rel="alternate" type="application/rss+xml" title="Royalhotel &raquo; Contact Comments Feed"
+	<link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Contact Comments Feed"
 		href="16-2/feed/feed.html" />
 	<script type="text/javascript">
 		window._wpemojiSettings = {
@@ -44,12 +44,12 @@
 			}, c.DOMReady = !1, c.readyCallback = function () {
 				c.DOMReady = !0
 			}, c.supports.simple && c.supports.flag || (g = function () {
-					c.readyCallback()
-				}, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !
+				c.readyCallback()
+			}, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !
 				1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function () {
-					"complete" === b.readyState && c.readyCallback()
-				})), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f
-					.wpemoji)))
+				"complete" === b.readyState && c.readyCallback()
+			})), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f
+				.wpemoji)))
 		}(window, document, window._wpemojiSettings);
 	</script>
 	<style type="text/css">
@@ -220,6 +220,7 @@
 	<meta name="generator" content="WooCommerce 2.4.8" />
 	<link rel='canonical' href='contact.html' />
 	<link rel='shortlink' href='http://demo.awethemes.com/flawleshotel/?p=16' />
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 	<script type="text/javascript">
 		jQuery(document).ready(function () {
 			// CUSTOM AJAX CONTENT LOADING FUNCTION
@@ -292,6 +293,47 @@
 	<link rel="Shortcut Icon" href="wp-content/uploads/2015/05/favicon1.png" type="image/x-icon" />
 	<link id="font-frame-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet"
 		type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="https://unpkg.com/sweetalert2@7.19.1/dist/sweetalert2.all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+	<script src="js/dirPagination.js"></script>
+	<script>
+		var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
+		app.filter('wraps', function () {
+			return function (value) {
+				return "http://localhost:7080/uploads/" + value;
+			};
+		});
+		app.controller('myCtrl', function ($scope, $http, ) {
+
+			$scope.feedBack = {};
+
+			$scope.sendFeedBack= function(){
+
+				$http.post("http://localhost:7080/feedback", JSON.stringify($scope.feedBack))
+				.then(function (response) {
+					toastr.success("Success", "Saved", {
+						timeOut: 3000
+					});
+					$scope.feedBack = {};
+
+				})
+				.catch(function (error) {
+					toastr.error("Error", error.data.error, {
+						timeOut: 3000
+					});
+				});
+			}
+		
+
+
+		});
+	</script>
 </head>
 
 <body class="page page-id-16 page-template page-template-contact-page page-template-contact-page-php blog">
@@ -299,57 +341,34 @@
 	<div class="md-hotel">
 		<div id="mp-pusher" class="mp-pusher">
 			<!-- Header -->
-			<header class="md-header">
-				<div class="container clearfix">
-					<div class="grid_12">
-						<!-- Logo -->
-						<h1 class="md-logo">
-							<a href="index.html" title="Royalhotel" rel="home">
-								<img src="wp-content/uploads/2015/01/logo1.png" alt="Royalhotel">
-							</a>
-						</h1>
-						<!-- Menu -->
-						<nav id="main-nav" class="nav-collapse">
-							<ul id="main-menu" class="md-menu">
-								<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-										href="index.html">Home</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-										href="accommodations.html">Accommodations</a></li>
-								<li
-									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children have-submenu">
-									<a href="http://demo.awethemes.com/flawleshotel/?page_id=14">Our services</a>
-									<div class="sub-menu">
-										<ul class="sub-menu-inner">
-											<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-													href="blog/page/1/blog.html">Blog</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-													href="testimonial.html">Testimonial</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-													href="cart.html">Booking Cart</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-													href="checkout.html">Checkout</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-													href="f-a-q.html">Terms and Conditions</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-													href="about-use.html">About</a></li>
-										</ul>
-									</div>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-										href="gallery.html">Gallery</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-										href="aboutus.html">About us</a></li>
-								<li
-									class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16 current_page_item">
-									<a href="contact.html">Contact</a></li>
-							</ul>
-						</nav> <!-- Icon Responsvie Menu -->
-						<a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="contact.html#alternate-menu"></a>
-						<!-- Language Bar -->
+		    <header class="md-header">
+                <div class="container clearfix">
+                    <div class="grid_12">
+                        <!-- Logo -->
+                        <h1 class="md-logo">
+                            <a href="index.html" title="Royalehotel" rel="home">
+                                <img src="wp-content/uploads/2015/01/logo1.png" alt="Royalehotel">
+                            </a>
+                        </h1>
+                        <!-- Menu -->
+                        <nav id="main-nav" class="nav-collapse">
+                            <ul id="main-menu" class="md-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item">
+                                    <a href="index.html">Home</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="accommodation.html">accommodation</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="services.html">Services</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html">menu</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="aboutus.html">About us</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <!-- Icon Responsvie Menu -->
+                        <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="index.html#alternate-menu"></a>
+                        <!-- Language Bar -->
 
-					</div>
-				</div>
-			</header>
+                    </div>
+                </div>
+            </header>
 			<!-- Header End -->
 
 			<!-- Menu Responsive -->
@@ -361,7 +380,7 @@
 						<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
 								href="index.html">Home</a></li>
 						<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-								href="accommodations.html">Accommodations</a></li>
+								href="accommodation.html">accommodation</a></li>
 						<li
 							class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-sub">
 							<a href="http://demo.awethemes.com/flawleshotel/?page_id=14">Our services</a>
@@ -384,7 +403,7 @@
 							</div>
 						</li>
 						<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
-								href="gallery.html">Gallery</a></li>
+								href="menu.html">menu</a></li>
 						<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
 								href="aboutus.html">About us</a></li>
 						<li
@@ -396,15 +415,14 @@
 			<!-- Menu Responsive End -->
 			<section class="md-contact">
 
-				<figure class="bg-contact"
-					style="background-image: url(assets/images/rooms/outside.jpg)">
+				<figure class="bg-contact" style="background-image: url(assets/images/rooms/outside.jpg)">
 
 					<div class="bg-pattern"
 						style="background-image: url('http://demo.awethemes.com/flawleshotel/wp-content/uploads/2015/01/pattern.png')">
 					</div>
 				</figure>
 				<div class="contact-wrap">
-					<div class="layout-left">
+					<div class="layout-left" style="overflow-y:scroll ;height:100%;" >
 						<header class="box-heading heading-large">
 							C <div class="decription-override">
 								<h2 class="h1">Contact</h2>
@@ -433,25 +451,39 @@
 													name="your-name" value="" size="40"
 													class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-control"
 													id="contact-name" aria-required="true" aria-invalid="false"
-													placeholder="Name" /></span>
+													ng-model="feedBack.firstname" placeholder=" First Name" /></span>
+										</div>
+										<div class="form-group">
+											<span class="wpcf7-form-control-wrap your-name"><input type="text"
+													ng-model="feedBack.lastname" name="your-name" value="" size="40"
+													class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-control"
+													id="contact-name" aria-required="true" aria-invalid="false"
+													placeholder="Last Name" /></span>
 										</div>
 										<div class="form-group">
 											<span class="wpcf7-form-control-wrap your-email"><input type="email"
-													name="your-email" value="" size="40"
+													ng-model="feedBack.email" name="your-email" value="" size="40"
 													class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-control"
 													id="contact-email" aria-required="true" aria-invalid="false"
 													placeholder="Email" /></span>
 										</div>
+										<div class="form-group">
+											<span class="wpcf7-form-control-wrap your-email"><input type="text"
+													name="your-email" value="" size="40"
+													class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-control"
+													id="contact-email" aria-required="true" aria-invalid="false"
+													placeholder="Phone number" ng-model="feedBack.phone"  /></span>
+										</div>
 									</div>
 									<div class="form-group">
 										<span class="wpcf7-form-control-wrap your-message"><textarea name="your-message"
-												cols="40" rows="10"
+												cols="40" rows="2" ng-model="feedBack.message"
 												class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required input-control"
 												id="contact-texarea" aria-required="true" aria-invalid="false"
 												placeholder="message"></textarea></span>
 									</div>
 									<div class="form-group">
-										<input type="submit" value="Submit"
+										<input type="button" value="Submit" ng-click="sendFeedBack()"
 											class="wpcf7-form-control wpcf7-submit btn btn-alter btn-border btn-border-brown"
 											id="submit-contact" />
 									</div>
@@ -462,10 +494,10 @@
 						<div class="address-wrap clearfix">
 							<div class="address-info">
 								<ul>
-									<li><i class="fa fa-map-marker"></i>25 California Avenue, Santa Monica, California.
+									<li><i class="fa fa-map-marker"></i>Ndalat Rd, off Langata South Road.
 									</li>
-									<li><i class="fa fa-phone"></i>+1-888-8765-1234</li>
-									<li><i class="fa fa-envelope-o"></i>contact@polix.com</li>
+							
+									<li><i class="fa fa-envelope-o"></i>royalehealthclub@gmail.com</li>
 
 								</ul>
 							</div>
@@ -473,8 +505,7 @@
 								<div>
 									<i class="icon icon-map-brown"></i>
 									<a class="popup-gmaps"
-										href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.0003097087792!2d-118.50285509999999!3d34.018203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4c41fb9b5fb%3A0xf414ba23e770309e!2s25+California+Ave%2C+Santa+Monica%2C+CA+90403%2C+USA!5e0!3m2!1sen!2s!4v1432809370717">See
-										Map</a>
+									>Feed back</a>
 								</div>
 							</div>
 						</div><!-- /.address-wrap -->
@@ -483,59 +514,56 @@
 			</section><!-- /.md-wrapper  -->
 			<!-- Footer -->
 			<footer class="md-footer">
-				<div class="container clearfix">
-					<div id="black-studio-tinymce-3" class="grid_4 footer-column widget_black_studio_tinymce ">
-						<h3 class="widgettitle footer-widget-title">Royal Hotel</h3>
-						<div class="textwidget">
-							<div class="hotel-address">
-								 
-<address>Ndalat Rd, off Langata South Road,<br />0502 Nairobi, Kenya</address>
-								<p class="website">&copy; Royal.com</p>
-							</div>
-						</div>
-					</div>
-					<div id="black-studio-tinymce-5" class="grid_4 footer-column widget_black_studio_tinymce ">
-						<h3 class="widgettitle footer-widget-title">Contact</h3>
-						<div class="textwidget">
-							<div class="hotel-contact">
-								<ul class="footer-content">
-									<li>telephone<span class="hotel-number">(012) 345-6789</span></li>
-									<li>fax <span class="hotel-number">(012) 345-6789</span></li>
-									<li>reservations<span class="hotel-number">(012) 345-6789</span></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div id="awew_mailchimp-2" class="grid_4 footer-column awew_mailchimp ">
-						<div class="hotel-news">
-							<h3 class="widgettitle footer-widget-title">Newsletter</h3>
-							<div class="footer-content">
-								<p>
-									SIGN UP FOR OUR NEWSLETTER, AND WE'LL KEEP YOU UPDATED ON ALL EVENTS AT FLAWLES!
-								</p>
-								<form>
-									<p class="subscribe-status alert-done" style="display: none">Submit success - Bigs
-										thank for you</p>
-									<input type="text" class="js_email"><button class="btn btn-brown js_subcr"
-										type="submit">Send</button>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div id="awe_follow_us_widget-2" class="grid_12 widget_followus">
-						<div class="widget footer-social">
-							<div class="social-inner">
-								<h4 class="text-uppercase widget-title"><span>Follow us</span></h4><span
-									class="social-group"><a class="wow fadeInLeft _1"
-										href="https://www.facebook.com/awethemes"><i
-											class="awe-icon fa fa-facebook"></i></a><a class="wow fadeInLeft _3"
+                <div class="container clearfix">
+                    <div id="black-studio-tinymce-3" class="grid_4 footer-column widget_black_studio_tinymce ">
+                        <h3 class="widgettitle footer-widget-title">Royale Hotel</h3>
+                        <div class="textwidget">
+                            <div class="hotel-address">
+
+                                <address>Ndalat Rd, off Langata South Road,<br />0502 Nairobi, Kenya</address>
+                                <p class="website">&copy; Royale.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="black-studio-tinymce-5" class="grid_4 footer-column widget_black_studio_tinymce ">
+                        <h3 class="widgettitle footer-widget-title">Contact</h3>
+                        <div class="textwidget">
+                            <div class="hotel-contact">
+                                <ul class="footer-content">
+                                    <li>telephone<span class="hotel-number">(012) 345-6789</span></li>
+                                    <li>email <span class="hotel-email" style="text-transform: lowercase;">royalehealthclub@gmail.com</span></li>
+                                    <li>reservations<span class="hotel-number">(012) 345-6789</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="awew_mailchimp-2" class="grid_4 footer-column awew_mailchimp ">
+                        <div class="hotel-news">
+                            <h3 class="widgettitle footer-widget-title">Newsletter</h3>
+                            <div class="footer-content">
+                                <p>
+                                    SIGN UP FOR OUR NEWSLETTER, AND WE'LL KEEP YOU UPDATED ON ALL EVENTS AT FLAWLES!
+                                </p>
+                                <form>
+                                    <p class="subscribe-status alert-done" style="display: none">Submit success - Bigs thank for you</p>
+                                    <input type="text" class="js_email"><button class="btn btn-brown js_subcr" type="submit">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="awe_follow_us_widget-2" class="grid_12 widget_followus">
+                        <div class="widget footer-social">
+                            <div class="social-inner">
+                                <h4 class="text-uppercase widget-title"><span>Follow us</span></h4><span class="social-group"><a class="wow fadeInLeft _1"
+										href="https://www.instagram.com/royale_hc/?hl=en"><i
+											class="awe-icon fa fa-instagram"></i></a><a class="wow fadeInLeft _3"
 										href="https://twitter.com/awethemes"><i
 											class="awe-icon fa fa-twitter-square"></i></a></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 			<!-- Footer End -->
 		</div><!-- /.mp-pusher -->
 	</div>

@@ -246,7 +246,7 @@
                 midClick: true,
                 removalDelay: 600,
                 mainClass: 'awe-mfp-lightbox',
-                gallery: {
+                menu: {
                     enabled: true,
                     navigateByImgClick: true,
                     // preload: [0,2] // Will preload 0 - before current, and 1 after the current image
