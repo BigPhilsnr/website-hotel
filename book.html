@@ -2,364 +2,339 @@
 <html lang="en-US" ng-app="myApp" ng-controller="myCtrl">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="profile" href="http://gmpg.org/xfn/11" />
-  <link rel="pingback" href="http://demo.awethemes.com/flawleshotel/xmlrpc.php" />
-  <title>Book | Royalehotel</title>
-  <!-- wordpress head functions -->
-  <!-- end of wordpress head -->
-  <!--[if lt IE 9]>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="http://demo.awethemes.com/flawleshotel/xmlrpc.php" />
+    <title>Book | Royalehotel</title>
+    <!-- wordpress head functions -->
+    <!-- end of wordpress head -->
+    <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
-  <link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Feed" href="feed/feed.html" />
-  <link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Comments Feed"
-    href="comments/feed/feed.html" />
-  <link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Contact Comments Feed"
-    href="16-2/feed/feed.html" />
-  <script type="text/javascript">
-    window._wpemojiSettings = {
-      baseUrl: "http:\/\/s.w.org\/images\/core\/emoji\/72x72\/",
-      ext: ".png",
-      source: {
-        concatemoji: "http:\/\/demo.awethemes.com\/flawleshotel\/wp-includes\/js\/wp-emoji-release.min.js"
-      }
-    };
-    !(function (a, b, c) {
-      function d(a) {
-        var c = b.createElement("canvas"),
-          d = c.getContext && c.getContext("2d");
-        return d && d.fillText ?
-          ((d.textBaseline = "top"),
-            (d.font = "600 32px Arial"),
-            "flag" === a ?
-            (d.fillText(
-                String.fromCharCode(55356, 56812, 55356, 56807),
-                0,
-                0
-              ),
-              c.toDataURL().length > 3e3) :
-            (d.fillText(String.fromCharCode(55357, 56835), 0, 0),
-              0 !== d.getImageData(16, 16, 1, 1).data[0])) :
-          !1;
-      }
-
-      function e(a) {
-        var c = b.createElement("script");
-        (c.src = a),
-        (c.type = "text/javascript"),
-        b.getElementsByTagName("head")[0].appendChild(c);
-      }
-      var f, g;
-      (c.supports = {
-        simple: d("simple"),
-        flag: d("flag")
-      }),
-      (c.DOMReady = !1),
-      (c.readyCallback = function () {
-        c.DOMReady = !0;
-      }),
-      (c.supports.simple && c.supports.flag) ||
-      ((g = function () {
-          c.readyCallback();
-        }),
-        b.addEventListener ?
-        (b.addEventListener("DOMContentLoaded", g, !1),
-          a.addEventListener("load", g, !1)) :
-        (a.attachEvent("onload", g),
-          b.attachEvent("onreadystatechange", function () {
-            "complete" === b.readyState && c.readyCallback();
-          })),
-        (f = c.source || {}),
-        f.concatemoji ?
-        e(f.concatemoji) :
-        f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji)));
-    })(window, document, window._wpemojiSettings);
-  </script>
-  <style type="text/css">
-    img.wp-smiley,
-    img.emoji {
-      display: inline !important;
-      border: none !important;
-      box-shadow: none !important;
-      height: 1em !important;
-      width: 1em !important;
-      margin: 0 0.07em !important;
-      vertical-align: -0.1em !important;
-      background: none !important;
-      padding: 0 !important;
-    }
-  </style>
-  <link rel="stylesheet" id="contact-form-7-css" href="wp-content/plugins/contact-form-7/includes/css/styles.css"
-    type="text/css" media="all" />
-  <link rel="stylesheet" id="rs-plugin-settings-css" href="wp-content/plugins/revslider/rs-plugin/css/settings.css"
-    type="text/css" media="all" />
-
-  <link rel="stylesheet" id="woocommerce-layout-css"
-    href="wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css" type="text/css" media="all" />
-  <link rel="stylesheet" id="woocommerce-smallscreen-css"
-    href="wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css" type="text/css"
-    media="only screen and (max-width: 768px)" />
-  <link rel="stylesheet" id="woocommerce-general-css" href="wp-content/plugins/woocommerce/assets/css/woocommerce.css"
-    type="text/css" media="all" />
-  <link rel="stylesheet" id="flawleshotel-font-css" href="wp-content/themes/flawleshotel/assets/css/font.css"
-    type="text/css" media="all" />
-  <link rel="stylesheet" id="flawleshotel-fontawesome-css"
-    href="wp-content/themes/flawleshotel/assets/css/font-awesome-4.2.0/css/font-awesome.min.css" type="text/css"
-    media="all" />
-  <link rel="stylesheet" id="flawleshotel-ui-css"
-    href="wp-content/themes/flawleshotel/assets/css/libs/jquery-ui.min.css" type="text/css" media="all" />
-  <link rel="stylesheet" id="flawleshotel-bxslider-css"
-    href="wp-content/themes/flawleshotel/assets/css/jquery.bxslider.css" type="text/css" media="all" />
-  <link rel="stylesheet" id="flawleshotel-style-css" href="wp-content/themes/flawleshotel/assets/css/style.css"
-    type="text/css" media="all" />
-  <link rel="stylesheet" id="flaleshotel-magnific-popup-css"
-    href="wp-content/themes/flawleshotel/assets/css/libs/magnific-popup.css" type="text/css" media="all" />
-  <link rel="stylesheet" id="flawleshotel-responsive-css"
-    href="wp-content/themes/flawleshotel/assets/css/responsive.css" type="text/css" media="all" />
-  <link rel="stylesheet" id="flawleshotel-reponsive-menu-css"
-    href="wp-content/themes/flawleshotel/assets/css/responsive-menu.css" type="text/css" media="all" />
-  <link rel="stylesheet" id="flawleshotel-owl-carousel-css"
-    href="wp-content/themes/flawleshotel/assets/css/owl.carousel.css" type="text/css" media="all" />
-  <link rel="stylesheet" id="flawleshotel-css" href="wp-content/themes/flawleshotel/style.css" type="text/css"
-    media="all" />
-  <script type="text/javascript" src="wp-includes/js/jquery/jquery.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min.js"></script>
-  <script type="text/javascript" src="wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js">
-  </script>
-  <script type="text/javascript" src="wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js">
-  </script>
-  <link rel="pingback" href="http://demo.awethemes.com/flawleshotel/xmlrpc.php" />
-  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.xml" />
-  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
-  <meta name="generator" content="WordPress 4.3.22" />
-  <meta name="generator" content="WooCommerce 2.4.8" />
-  <link rel="canonical" href="contact.html" />
-  <link rel="stylesheet" id="flawleshotel-css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff" type="text/css"
-    media="all" />
-  <link rel="shortlink" href="http://demo.awethemes.com/flawleshotel/?p=16" />
-  <link rel="Shortcut Icon" href="wp-content/uploads/2015/05/favicon1.png" type="image/x-icon" />
-  <link id="font-frame-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet"
-    type="text/css" />
-  <script src="js/jquery-1.11.2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-  <script src="https://unpkg.com/sweetalert2@7.19.1/dist/sweetalert2.all.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-  <script src="js/dirPagination.js"></script>
-  <script>
-    var app = angular.module("myApp", [
-      "angularUtils.directives.dirPagination"
-    ]);
-    app.filter("wraps", function () {
-      return function (value) {
-        return "http://localhost:7080/uploads/" + value;
-      };
-    });
-    app.controller("myCtrl", function ($scope, $http) {
-      $scope.checkRoom = {};
-      let params = new URLSearchParams(location.search);
-      $scope.checkRoom.to = params.get("to");
-      $scope.checkRoom.from = params.get("from");
-      $scope.checkRoom.adults = params.get("adults");
-      $scope.checkRoom.children = params.get("children");
-      $scope.checkRoom.roomId = params.get("room");
-
-      var url = `http://localhost:7080/room?id=${$scope.checkRoom.roomId}`;
-      $scope.room = {};
-
-      $http.get(url).then(function (response) {
-        var data = response.data;
-        $scope.room = data.room;
-        alert(JSON.stringify(response));
-      });
-
-      $scope.book = function () {
-        var body = {
-          to: new Date($scope.checkRoom.to).toISOString(),
-          from: new Date($scope.checkRoom.from).toISOString(),
-          adults: $scope.checkRoom.adults,
-          children: $scope.checkRoom.children,
-          firstName: $scope.checkRoom.firstName,
-          lastName: $scope.checkRoom.lastName,
-          user: $scope.checkRoom.firstName + " " + $scope.checkRoom.lastName,
-          email: $scope.checkRoom.email,
-          phone: $scope.checkRoom.phone,
-          room: $scope.checkRoom.roomId
+    <link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Feed" href="feed/feed.html" />
+    <link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Comments Feed" href="comments/feed/feed.html" />
+    <link rel="alternate" type="application/rss+xml" title="Royalehotel &raquo; Contact Comments Feed" href="16-2/feed/feed.html" />
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            baseUrl: "http:\/\/s.w.org\/images\/core\/emoji\/72x72\/",
+            ext: ".png",
+            source: {
+                concatemoji: "http:\/\/demo.awethemes.com\/flawleshotel\/wp-includes\/js\/wp-emoji-release.min.js"
+            }
         };
+        !(function(a, b, c) {
+            function d(a) {
+                var c = b.createElement("canvas"),
+                    d = c.getContext && c.getContext("2d");
+                return d && d.fillText ?
+                    ((d.textBaseline = "top"),
+                        (d.font = "600 32px Arial"),
+                        "flag" === a ?
+                        (d.fillText(
+                                String.fromCharCode(55356, 56812, 55356, 56807),
+                                0,
+                                0
+                            ),
+                            c.toDataURL().length > 3e3) :
+                        (d.fillText(String.fromCharCode(55357, 56835), 0, 0),
+                            0 !== d.getImageData(16, 16, 1, 1).data[0])) :
+                    !1;
+            }
 
-        $http
-          .post("http://localhost:7080/admin/book", JSON.stringify(body))
-          .then(function (response) {
-            toastr.success("Success", "Success", {
-              timeOut: 3000
+            function e(a) {
+                var c = b.createElement("script");
+                (c.src = a),
+                (c.type = "text/javascript"),
+                b.getElementsByTagName("head")[0].appendChild(c);
+            }
+            var f, g;
+            (c.supports = {
+                simple: d("simple"),
+                flag: d("flag")
+            }),
+            (c.DOMReady = !1),
+            (c.readyCallback = function() {
+                c.DOMReady = !0;
+            }),
+            (c.supports.simple && c.supports.flag) ||
+            ((g = function() {
+                    c.readyCallback();
+                }),
+                b.addEventListener ?
+                (b.addEventListener("DOMContentLoaded", g, !1),
+                    a.addEventListener("load", g, !1)) :
+                (a.attachEvent("onload", g),
+                    b.attachEvent("onreadystatechange", function() {
+                        "complete" === b.readyState && c.readyCallback();
+                    })),
+                (f = c.source || {}),
+                f.concatemoji ?
+                e(f.concatemoji) :
+                f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji)));
+        })(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="contact-form-7-css" href="wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="rs-plugin-settings-css" href="wp-content/plugins/revslider/rs-plugin/css/settings.css" type="text/css" media="all" />
+
+    <link rel="stylesheet" id="woocommerce-layout-css" href="wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="woocommerce-smallscreen-css" href="wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" />
+    <link rel="stylesheet" id="woocommerce-general-css" href="wp-content/plugins/woocommerce/assets/css/woocommerce.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-font-css" href="wp-content/themes/flawleshotel/assets/css/font.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-fontawesome-css" href="wp-content/themes/flawleshotel/assets/css/font-awesome-4.2.0/css/font-awesome.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-ui-css" href="wp-content/themes/flawleshotel/assets/css/libs/jquery-ui.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-bxslider-css" href="wp-content/themes/flawleshotel/assets/css/jquery.bxslider.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-style-css" href="wp-content/themes/flawleshotel/assets/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flaleshotel-magnific-popup-css" href="wp-content/themes/flawleshotel/assets/css/libs/magnific-popup.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-responsive-css" href="wp-content/themes/flawleshotel/assets/css/responsive.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-reponsive-menu-css" href="wp-content/themes/flawleshotel/assets/css/responsive-menu.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-owl-carousel-css" href="wp-content/themes/flawleshotel/assets/css/owl.carousel.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="flawleshotel-css" href="wp-content/themes/flawleshotel/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="wp-includes/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js">
+    </script>
+    <script type="text/javascript" src="wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js">
+    </script>
+    <link rel="pingback" href="http://demo.awethemes.com/flawleshotel/xmlrpc.php" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.xml" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 4.3.22" />
+    <meta name="generator" content="WooCommerce 2.4.8" />
+    <link rel="canonical" href="contact.html" />
+    <link rel="stylesheet" id="flawleshotel-css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff" type="text/css" media="all" />
+    <link rel="shortlink" href="http://demo.awethemes.com/flawleshotel/?p=16" />
+    <link rel="Shortcut Icon" href="wp-content/uploads/2015/05/favicon1.png" type="image/x-icon" />
+    <link id="font-frame-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert2@7.19.1/dist/sweetalert2.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <script src="js/dirPagination.js"></script>
+    <script>
+        var app = angular.module("myApp", [
+            "angularUtils.directives.dirPagination"
+        ]);
+        app.filter("wraps", function() {
+            return function(value) {
+                return "http://localhost:7080/uploads/" + value;
+            };
+        });
+        app.controller("myCtrl", function($scope, $http) {
+            $scope.checkRoom = {};
+            let params = new URLSearchParams(location.search);
+            $scope.checkRoom.to = params.get("to");
+            $scope.checkRoom.from = params.get("from");
+            $scope.checkRoom.adults = params.get("adults");
+            $scope.checkRoom.children = params.get("children");
+            $scope.checkRoom.roomId = params.get("room");
+
+            var url = `http://localhost:7080/room?id=${$scope.checkRoom.roomId}`;
+            $scope.room = {};
+
+            $http.get(url).then(function(response) {
+                var data = response.data;
+                $scope.room = data.room;
+                alert(JSON.stringify(response));
             });
-            console.log(response);
-            alert(JSON.stringify(response));
-          })
-          .catch(function (error) {
-            alert(JSON.stringify(error));
-          });
+
+            $scope.book = function() {
+                var body = {
+                    to: new Date($scope.checkRoom.to).toISOString(),
+                    from: new Date($scope.checkRoom.from).toISOString(),
+                    adults: $scope.checkRoom.adults,
+                    children: $scope.checkRoom.children,
+                    firstName: $scope.checkRoom.firstName,
+                    lastName: $scope.checkRoom.lastName,
+                    name: $scope.checkRoom.user,
+                    email: $scope.checkRoom.email,
+                    phone: $scope.checkRoom.phone,
+                    room: $scope.checkRoom.roomId
+                };
+
+                $http
+                    .post("http://localhost:7080/admin/book", JSON.stringify(body))
+                    .then(function(response) {
+                        toastr.success("Success", "Success", {
+                            timeOut: 3000
+                        });
+                        console.log(response);
+                        alert("Booked success");
+                    })
+                    .catch(function(error) {
+                        toastr.error("Error", "Check all filed are correct", {
+                            timeOut: 3000
+                        });
+                    });
 
 
-      };
-    });
-  </script>
+            };
+        });
+    </script>
 </head>
 
 <body class="page page-id-16 page-template page-template-contact-page page-template-contact-page-php blog">
-  <!-- Page wrap -->
-  <div class="md-hotel">
-    <div id="mp-pusher" class="mp-pusher">
-      <!-- Header -->
-      <header class="md-header">
-        <div class="container clearfix">
-          <div class="grid_12">
-            <!-- Logo -->
-            <h1 class="md-logo">
-              <a href="index.html" title="Royalehotel" rel="home">
-                <img src="wp-content/uploads/2015/01/logo1.png" alt="Royalehotel" />
-              </a>
-            </h1>
-            <!-- Menu -->
-            <nav id="main-nav" class="nav-collapse">
-              <ul id="main-menu" class="md-menu">
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="index.html">Home</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="accommodation.html">accommodation</a>
-                </li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children have-submenu">
-                  <a href="http://demo.awethemes.com/flawleshotel/?page_id=14">Our services</a>
-                  <div class="sub-menu">
-                    <ul class="sub-menu-inner">
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="blog/page/1/blog.html">Blog</a>
-                      </li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="testimonial.html">Testimonial</a>
-                      </li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="cart.html">Booking Cart</a>
-                      </li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="checkout.html">Checkout</a>
-                      </li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="f-a-q.html">Terms and Conditions</a>
-                      </li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="about-use.html">About</a>
-                      </li>
+    <!-- Page wrap -->
+    <div class="md-hotel">
+        <div id="mp-pusher" class="mp-pusher">
+            <!-- Header -->
+            <header class="md-header">
+                <div class="container clearfix">
+                    <div class="grid_12">
+                        <!-- Logo -->
+                        <h1 class="md-logo">
+                            <a href="index.html" title="Royalehotel" rel="home">
+                                <img src="wp-content/uploads/2015/01/logo1.png" alt="Royalehotel" />
+                            </a>
+                        </h1>
+                        <!-- Menu -->
+                        <nav id="main-nav" class="nav-collapse">
+                            <ul id="main-menu" class="md-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="accommodation.html">accommodation</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children have-submenu">
+                                    <a href="http://demo.awethemes.com/flawleshotel/?page_id=14">Our services</a>
+                                    <div class="sub-menu">
+                                        <ul class="sub-menu-inner">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="blog/page/1/blog.html">Blog</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="testimonial.html">Testimonial</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="cart.html">Booking Cart</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="checkout.html">Checkout</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="f-a-q.html">Terms and Conditions</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="about-use.html">About</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="menu.html">menu</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="aboutus.html">About us</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16 current_page_item">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Icon Responsvie Menu -->
+                        <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="contact.html#alternate-menu"></a>
+                        <!-- Language Bar -->
+                    </div>
+                </div>
+            </header>
+            <!-- Header End -->
+
+            <!-- Menu Responsive -->
+
+            <nav id="mp-menu" class="mp-menu alternate-menu mp-overlap right-side">
+                <div class="mp-level">
+                    <h2>Menu</h2>
+                    <ul id="menu-flawleshotel-menu" class="">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="accommodation.html">accommodation</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-sub">
+                            <a href="http://demo.awethemes.com/flawleshotel/?page_id=14">Our services</a>
+                            <div class="mp-level">
+                                <h2>Page</h2>
+                                <a class="mp-back" href="contact.html#">Back</a>
+
+                            </div>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="menu.html">menu</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="aboutus.html">About us</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16 current_page_item">
+                            <a href="contact.html">Contact</a>
+                        </li>
                     </ul>
-                  </div>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="menu.html">menu</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="aboutus.html">About us</a>
-                </li>
-                <li
-                  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16 current_page_item">
-                  <a href="contact.html">Contact</a>
-                </li>
-              </ul>
+                </div>
             </nav>
-            <!-- Icon Responsvie Menu -->
-            <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="contact.html#alternate-menu"></a>
-            <!-- Language Bar -->
-          </div>
-        </div>
-      </header>
-      <!-- Header End -->
+            <!-- Menu Responsive End -->
+            <section class="md-contact">
+                <figure class="bg-contact" style="background-image: url(assets/images/rooms/outside.jpg)">
+                    <div class="bg-pattern" style="background-image: url('http://demo.awethemes.com/flawleshotel/wp-content/uploads/2015/01/pattern.png')">
+                    </div>
+                </figure>
+                <div class="contact-wrap">
+                    <div class="layout-left">
+                        <div class="row form-contact">
+                            <div role="form" class="wpcf7" id="wpcf7-f334-o1" lang="en-US" dir="ltr">
+                                <div class="screen-reader-response"></div>
+                                <form action="contact.html#wpcf7-f334-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                                    <div style="display: none;">
+                                        <input type="hidden" name="_wpcf7" value="334" />
+                                        <input type="hidden" name="_wpcf7_version" value="4.3" />
+                                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f334-o1" />
+                                        <input type="hidden" name="_wpnonce" value="c2726d7f36" />
+                                    </div>
 
-      <!-- Menu Responsive -->
-
-      <nav id="mp-menu" class="mp-menu alternate-menu mp-overlap right-side">
-        <div class="mp-level">
-          <h2>Menu</h2>
-          <ul id="menu-flawleshotel-menu" class="">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page">
-              <a href="index.html">Home</a>
-            </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page">
-              <a href="accommodation.html">accommodation</a>
-            </li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-sub">
-              <a href="http://demo.awethemes.com/flawleshotel/?page_id=14">Our services</a>
-              <div class="mp-level">
-                <h2>Page</h2>
-                <a class="mp-back" href="contact.html#">Back</a>
-               
-              </div>
-            </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page">
-              <a href="menu.html">menu</a>
-            </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page">
-              <a href="aboutus.html">About us</a>
-            </li>
-            <li
-              class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16 current_page_item">
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- Menu Responsive End -->
-      <section class="md-contact">
-        <figure class="bg-contact" style="background-image: url(assets/images/rooms/outside.jpg)">
-          <div class="bg-pattern"
-            style="background-image: url('http://demo.awethemes.com/flawleshotel/wp-content/uploads/2015/01/pattern.png')">
-          </div>
-        </figure>
-        <div class="contact-wrap">
-          <div class="layout-left">
-            <div class="row form-contact">
-              <div role="form" class="wpcf7" id="wpcf7-f334-o1" lang="en-US" dir="ltr">
-                <div class="screen-reader-response"></div>
-                <form action="contact.html#wpcf7-f334-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                  <div style="display: none;">
-                    <input type="hidden" name="_wpcf7" value="334" />
-                    <input type="hidden" name="_wpcf7_version" value="4.3" />
-                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f334-o1" />
-                    <input type="hidden" name="_wpnonce" value="c2726d7f36" />
-                  </div>
-
-                  <div class="box-booking booking-inline">
-                    <form onsubmit="return" action="check" id="frm" class="uploadImage" method="post"
-                      enctype="multipart/form-data">
-                      <div class="form-group">
-                        <label class="label-control">Arrival Date</label>
-                        <div class="booking-form select-black">
-                          <label class="collapse input">
+                                    <div class="box-booking booking-inline">
+                                        <form onsubmit="return" action="check" id="frm" class="uploadImage" method="post" enctype="multipart/form-data">
+                                            <div class="form-group">
+                                                <label class="label-control">Arrival Date</label>
+                                                <div class="booking-form select-black">
+                                                    <label class="collapse input">
                             <input type="text" name="from" ng-model="checkRoom.from"
                               class="input-control border-black awe-datepicker arrival-date" />
                           </label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="label-control">Departure Date</label>
-                        <div class="booking-form select-black">
-                          <label class="collapse input">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="label-control">Departure Date</label>
+                                                <div class="booking-form select-black">
+                                                    <label class="collapse input">
                             <input type="text" name="to" ng-model="checkRoom.to"
                               class="input-control border-black awe-datepicker departure-date" />
                           </label>
-                        </div>
-                      </div>
-                      <div class="form-group select">
-                        <label class="label-control">Adults</label>
-                        <div class="input-group select-black">
-                          <label class="collapse">
+                                                </div>
+                                            </div>
+                                            <div class="form-group select">
+                                                <label class="label-control">Adults</label>
+                                                <div class="input-group select-black">
+                                                    <label class="collapse">
                             <select class="form-select" name="adults" ng-model="checkRoom.adults">
                               <option value="">0</option>
                               <option value="1">1</option>
@@ -374,12 +349,12 @@
                               <option value="10">10</option>
                             </select>
                           </label>
-                        </div>
-                      </div>
-                      <div class="form-group select">
-                        <label class="label-control">Children</label>
-                        <div class="input-group select-black">
-                          <label class="collapse">
+                                                </div>
+                                            </div>
+                                            <div class="form-group select">
+                                                <label class="label-control">Children</label>
+                                                <div class="input-group select-black">
+                                                    <label class="collapse">
                             <select class="form-select" name="childrent" ng-model="checkRoom.children">
                               <option value="">0</option>
                               <option value="1">1</option>
@@ -394,264 +369,260 @@
                               <option value="10">10</option>
                             </select>
                           </label>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="row clearfix">
-                    <div class="form-group">
-                      <span class="wpcf7-form-control-wrap your-name"><input type="text" ng-model="checkRoom.user"
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="form-group">
+                                            <span class="wpcf7-form-control-wrap your-name"><input type="text" ng-model="checkRoom.user"
                           name="FullName" value="" size="40"
                           class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-control"
                           id="contact-name" aria-required="true" aria-invalid="false" placeholder="Full name" /></span>
-                    </div>
-                    <div class="form-group">
-                      <span class="wpcf7-form-control-wrap your-name"><input type="text" ng-model="checkRoom.roomId"
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="wpcf7-form-control-wrap your-name"><input type="text" ng-model="checkRoom.roomId"
                           name="lastname" value="" size="40"
                           class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-control"
                           id="contact-name" aria-required="true" aria-invalid="false" placeholder="Room" /></span>
-                    </div>
-                    <div class="form-group">
-                      <span class="wpcf7-form-control-wrap your-email"><input type="email" ng-model="checkRoom.email"
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="wpcf7-form-control-wrap your-email"><input type="email" ng-model="checkRoom.email"
                           name="emal" value="" size="40"
                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-control"
                           id="contact-email" aria-required="true" aria-invalid="false" placeholder="Email" /></span>
-                    </div>
-                    <div class="form-group">
-                      <span class="wpcf7-form-control-wrap your-email"><input type="text" ng-model="checkRoom.phone"
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="wpcf7-form-control-wrap your-email"><input type="text" ng-model="checkRoom.phone"
                           name="phone" value="" size="40"
                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-control"
                           id="contact-email" aria-required="true" aria-invalid="false" placeholder="Phone" /></span>
-                    </div>
-                  </div>
+                                        </div>
+                                    </div>
 
-                  <div class="form-group">
-                    <input type="button" value="Submit"
-                      class="wpcf7-form-control wpcf7-submit btn btn-alter btn-border btn-border-brown"
-                      id="submit-contact" ng-click="book()" />
-                  </div>
-                  <div class="wpcf7-response-output wpcf7-display-none"></div>
-                </form>
-              </div>
-            </div>
-            <!-- /.form-contact -->
-            <div class="address-wrap clearfix">
-              <div class="address-info">
-                <ul class="list">
-                  <li>
-                    {{room.name}}
-                  </li>
-                  <li>{{room.compelement}}</li>
-                  <li>{{room.adults}}</li>
-                </ul>
-              </div>
-              <div class="address-map">
-                <div>
-                  <i class="icon icon-map-brown"></i>
-                  <a class="popup-gmaps"
-                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.0003097087792!2d-118.50285509999999!3d34.018203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4c41fb9b5fb%3A0xf414ba23e770309e!2s25+California+Ave%2C+Santa+Monica%2C+CA+90403%2C+USA!5e0!3m2!1sen!2s!4v1432809370717">See
+                                    <div class="form-group">
+                                        <input type="button" value="Submit" class="wpcf7-form-control wpcf7-submit btn btn-alter btn-border btn-border-brown" id="submit-contact" ng-click="book()" />
+                                    </div>
+                                    <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.form-contact -->
+                        <div class="address-wrap clearfix">
+                            <div class="address-info">
+                                <ul class="list">
+                                    <li>
+                                        {{room.name}}
+                                    </li>
+                                    <li>{{room.compelement}}</li>
+                                    <li>{{room.adults}}</li>
+                                </ul>
+                            </div>
+                            <div class="address-map">
+                                <div>
+                                    <i class="icon icon-map-brown"></i>
+                                    <a class="popup-gmaps" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.0003097087792!2d-118.50285509999999!3d34.018203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4c41fb9b5fb%3A0xf414ba23e770309e!2s25+California+Ave%2C+Santa+Monica%2C+CA+90403%2C+USA!5e0!3m2!1sen!2s!4v1432809370717">See
                     Map</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.address-wrap -->
+                    </div>
                 </div>
-              </div>
-            </div>
-            <!-- /.address-wrap -->
-          </div>
-        </div>
-      </section>
-      <!-- /.md-wrapper  -->
-      <!-- Footer -->
-      <footer class="md-footer">
-        <div class="container clearfix">
-            <div id="black-studio-tinymce-3" class="grid_4 footer-column widget_black_studio_tinymce ">
-                <h3 class="widgettitle footer-widget-title">Royale Hotel</h3>
-                <div class="textwidget">
-                    <div class="hotel-address">
+            </section>
+            <!-- /.md-wrapper  -->
+            <!-- Footer -->
+            <footer class="md-footer">
+                <div class="container clearfix">
+                    <div id="black-studio-tinymce-3" class="grid_4 footer-column widget_black_studio_tinymce ">
+                        <h3 class="widgettitle footer-widget-title">Royale Hotel</h3>
+                        <div class="textwidget">
+                            <div class="hotel-address">
 
-                        <address>Ndalat Rd, off Langata South Road,<br />0502 Nairobi, Kenya</address>
-                        <p class="website">&copy; Royale.com</p>
+                                <address>Ndalat Rd, off Langata South Road,<br />0502 Nairobi, Kenya</address>
+                                <p class="website">&copy; Royale.com</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div id="black-studio-tinymce-5" class="grid_4 footer-column widget_black_studio_tinymce ">
-                <h3 class="widgettitle footer-widget-title">Contact</h3>
-                <div class="textwidget">
-                    <div class="hotel-contact">
-                        <ul class="footer-content">
-                            <li>telephone<span class="hotel-number">(012) 345-6789</span></li>
-                            <li>email <span class="hotel-email" style="text-transform: lowercase;">royalehealthclub@gmail.com</span></li>
-                            <li>reservations<span class="hotel-number">(012) 345-6789</span></li>
-                        </ul>
+                    <div id="black-studio-tinymce-5" class="grid_4 footer-column widget_black_studio_tinymce ">
+                        <h3 class="widgettitle footer-widget-title">Contact</h3>
+                        <div class="textwidget">
+                            <div class="hotel-contact">
+                                <ul class="footer-content">
+                                    <li>telephone<span class="hotel-number">(012) 345-6789</span></li>
+                                    <li>email <span class="hotel-email" style="text-transform: lowercase;">royalehealthclub@gmail.com</span></li>
+                                    <li>reservations<span class="hotel-number">(012) 345-6789</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div id="awew_mailchimp-2" class="grid_4 footer-column awew_mailchimp ">
-                <div class="hotel-news">
-                    <h3 class="widgettitle footer-widget-title">Newsletter</h3>
-                    <div class="footer-content">
-                        <p>
-                            SIGN UP FOR OUR NEWSLETTER, AND WE'LL KEEP YOU UPDATED ON ALL EVENTS AT FLAWLES!
-                        </p>
-                        <form>
-                            <p class="subscribe-status alert-done" style="display: none">Submit success - Bigs thank for you</p>
-                            <input type="text" class="js_email"><button class="btn btn-brown js_subcr" type="submit">Send</button>
-                        </form>
+                    <div id="awew_mailchimp-2" class="grid_4 footer-column awew_mailchimp ">
+                        <div class="hotel-news">
+                            <h3 class="widgettitle footer-widget-title">Newsletter</h3>
+                            <div class="footer-content">
+                                <p>
+                                    SIGN UP FOR OUR NEWSLETTER, AND WE'LL KEEP YOU UPDATED ON ALL EVENTS AT FLAWLES!
+                                </p>
+                                <form>
+                                    <p class="subscribe-status alert-done" style="display: none">Submit success - Bigs thank for you</p>
+                                    <input type="text" class="js_email"><button class="btn btn-brown js_subcr" type="submit">Send</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div id="awe_follow_us_widget-2" class="grid_12 widget_followus">
-                <div class="widget footer-social">
-                    <div class="social-inner">
-                        <h4 class="text-uppercase widget-title"><span>Follow us</span></h4><span class="social-group"><a class="wow fadeInLeft _1"
+                    <div id="awe_follow_us_widget-2" class="grid_12 widget_followus">
+                        <div class="widget footer-social">
+                            <div class="social-inner">
+                                <h4 class="text-uppercase widget-title"><span>Follow us</span></h4><span class="social-group"><a class="wow fadeInLeft _1"
             href="https://www.instagram.com/royale_hc/?hl=en"><i
               class="awe-icon fa fa-instagram"></i></a><a class="wow fadeInLeft _3"
             href="https://twitter.com/awethemes"><i
               class="awe-icon fa fa-twitter-square"></i></a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </footer>
+            <!-- Footer End -->
         </div>
-    </footer>
-      <!-- Footer End -->
+        <!-- /.mp-pusher -->
     </div>
-    <!-- /.mp-pusher -->
-  </div>
-  <script type="text/javascript">
-    jQuery(document).ready(function ($) {
-      // Function date validate
-      function validate_date_format_mdy(string) {
-        // mm/dd/yyyy
-        var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
-        if (!date_regex.test(string)) {
-          return false;
-        } else {
-          return true;
-        }
-      }
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            // Function date validate
+            function validate_date_format_mdy(string) {
+                // mm/dd/yyyy
+                var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+                if (!date_regex.test(string)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
 
-      function validate_date_format_dmy(string) {
-        // dd/mm/yyyy
-        var date_regex = /^(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
-        if (!date_regex.test(string)) {
-          return false;
-        } else {
-          return true;
-        }
-      }
+            function validate_date_format_dmy(string) {
+                // dd/mm/yyyy
+                var date_regex = /^(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
+                if (!date_regex.test(string)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
 
-      function validate_date_format_ymd(string) {
-        // yyy/mm/dd
-        var date_regex = /^[0-9]{4}\/(0[1-9]|1[0-2])\/(0[1-9]|[1-2][0-9]|3[0-1])$/;
-        if (!date_regex.test(string)) {
-          return false;
-        } else {
-          return true;
-        }
-      }
+            function validate_date_format_ymd(string) {
+                // yyy/mm/dd
+                var date_regex = /^[0-9]{4}\/(0[1-9]|1[0-2])\/(0[1-9]|[1-2][0-9]|3[0-1])$/;
+                if (!date_regex.test(string)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
 
-      $(".js_check").click(function (e) {
-        var $btn = $(this);
-        var $form = $btn.closest("form");
-        var $arrivalInput = $form.find(".arrival-date");
-        var $departureInput = $form.find(".departure-date");
-        var arrival = $arrivalInput.val();
-        var departure = $departureInput.val();
-        if (!validate_date_format_mdy(arrival)) {
-          $("#arrival-date").focus();
-          e.preventDefault();
-          return;
-        }
-        if (!validate_date_format_mdy(departure)) {
-          $("#departure-date").focus();
-          e.preventDefault();
-          return;
-        }
-        if (new Date(arrival).getTime() >= new Date(departure).getTime()) {
-          e.preventDefault();
-          $("#departure-date").focus();
-        }
-      });
-      $(".awe-datepicker").datepicker({
-        dateFormat: "mm/dd/yy",
-        constrainInput: true,
-        minDate: 0
-      });
-    });
-  </script>
-  <script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js"></script>
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var _wpcf7 = {
-      loaderUrl: "http:\/\/demo.awethemes.com\/flawleshotel\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
-      sending: "Sending ...",
-      cached: "1"
-    };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/js/scripts.js"></script>
-  <script type="text/javascript" src="wp-includes/js/underscore.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/backbone.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/core.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/widget.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/accordion.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/tabs.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/mouse.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/resizable.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/draggable.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/button.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/position.min.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/dialog.min.js"></script>
-  <script type="text/javascript" src="wp-content/plugins/flawleshotel-shortcode/assets/js/awe.core.js"></script>
-  <script type="text/javascript"
-    src="http://demo.awethemes.com/flawleshotel/wp-content/plugins/flawleshotel-shortcode/assets/js/awe.custom.js">
-  </script>
-  <script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js">
-  </script>
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var woocommerce_params = {
-      ajax_url: "\/flawleshotel\/wp-admin\/admin-ajax.php",
-      wc_ajax_url: "\/flawleshotel\/16-2\/?wc-ajax=%%endpoint%%"
-    };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js"></script>
-  <script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js">
-  </script>
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var wc_cart_fragments_params = {
-      ajax_url: "\/flawleshotel\/wp-admin\/admin-ajax.php",
-      wc_ajax_url: "\/flawleshotel\/16-2\/?wc-ajax=%%endpoint%%",
-      fragment_name: "wc_fragments"
-    };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js"></script>
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var ajax_object = {
-      ajax_url: "http:\/\/demo.awethemes.com\/flawleshotel\/wp-admin\/admin-ajax.php"
-    };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="wp-content/themes/flawleshotel/woocommerce/admin/assets/js/add_to_cart_ajax.js">
-  </script>
-  <script type="text/javascript" src="wp-includes/js/comment-reply.min.js"></script>
-  <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/modernizr.custom.js"></script>
-  <script type="text/javascript" src="wp-includes/js/jquery/ui/datepicker.min.js"></script>
-  <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/classie.js"></script>
-  <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/mlpushmenu.js"></script>
-  <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/jquery.magnific-popup.min.js"></script>
-  <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/jquery.magnific-popup.map.js"></script>
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var ajax_object = {
-      ajax_url: "http:\/\/demo.awethemes.com\/flawleshotel\/wp-admin\/admin-ajax.php",
-      subscribeNonce: "51d077bbd9"
-    };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/script.js"></script>
+            $(".js_check").click(function(e) {
+                var $btn = $(this);
+                var $form = $btn.closest("form");
+                var $arrivalInput = $form.find(".arrival-date");
+                var $departureInput = $form.find(".departure-date");
+                var arrival = $arrivalInput.val();
+                var departure = $departureInput.val();
+                if (!validate_date_format_mdy(arrival)) {
+                    $("#arrival-date").focus();
+                    e.preventDefault();
+                    return;
+                }
+                if (!validate_date_format_mdy(departure)) {
+                    $("#departure-date").focus();
+                    e.preventDefault();
+                    return;
+                }
+                if (new Date(arrival).getTime() >= new Date(departure).getTime()) {
+                    e.preventDefault();
+                    $("#departure-date").focus();
+                }
+            });
+            $(".awe-datepicker").datepicker({
+                dateFormat: "mm/dd/yy",
+                constrainInput: true,
+                minDate: 0
+            });
+        });
+    </script>
+    <script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var _wpcf7 = {
+            loaderUrl: "http:\/\/demo.awethemes.com\/flawleshotel\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
+            sending: "Sending ...",
+            cached: "1"
+        };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/js/scripts.js"></script>
+    <script type="text/javascript" src="wp-includes/js/underscore.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/backbone.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/core.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/widget.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/accordion.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/tabs.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/mouse.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/resizable.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/draggable.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/button.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/position.min.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/dialog.min.js"></script>
+    <script type="text/javascript" src="wp-content/plugins/flawleshotel-shortcode/assets/js/awe.core.js"></script>
+    <script type="text/javascript" src="http://demo.awethemes.com/flawleshotel/wp-content/plugins/flawleshotel-shortcode/assets/js/awe.custom.js">
+    </script>
+    <script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js">
+    </script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var woocommerce_params = {
+            ajax_url: "\/flawleshotel\/wp-admin\/admin-ajax.php",
+            wc_ajax_url: "\/flawleshotel\/16-2\/?wc-ajax=%%endpoint%%"
+        };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js"></script>
+    <script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js">
+    </script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = {
+            ajax_url: "\/flawleshotel\/wp-admin\/admin-ajax.php",
+            wc_ajax_url: "\/flawleshotel\/16-2\/?wc-ajax=%%endpoint%%",
+            fragment_name: "wc_fragments"
+        };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var ajax_object = {
+            ajax_url: "http:\/\/demo.awethemes.com\/flawleshotel\/wp-admin\/admin-ajax.php"
+        };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="wp-content/themes/flawleshotel/woocommerce/admin/assets/js/add_to_cart_ajax.js">
+    </script>
+    <script type="text/javascript" src="wp-includes/js/comment-reply.min.js"></script>
+    <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/datepicker.min.js"></script>
+    <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/classie.js"></script>
+    <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/mlpushmenu.js"></script>
+    <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/jquery.magnific-popup.map.js"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var ajax_object = {
+            ajax_url: "http:\/\/demo.awethemes.com\/flawleshotel\/wp-admin\/admin-ajax.php",
+            subscribeNonce: "51d077bbd9"
+        };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="wp-content/themes/flawleshotel/assets/js/script.js"></script>
 </body>
 
 </html>
