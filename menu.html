@@ -284,17 +284,17 @@
     <script src="js/dirPagination.js"></script>
     <script>
         var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
-		app.filter('wraps', function () {
-			return function (value) {
-				return "http://localhost:7080/images/" + value;
-			};
-		});
-		app.filter('date', function () {
-			return function (value) {
-				return	moment(value).format('dddd D MMMM YYYY LT');
-			
-			};
-		});
+        app.filter('wraps', function() {
+            return function(value) {
+                return "http://localhost:7080/images/" + value;
+            };
+        });
+        app.filter('date', function() {
+            return function(value) {
+                return moment(value).format('dddd D MMMM YYYY LT');
+
+            };
+        });
         app.controller('myCtrl', function($scope, $http, ) {
             var url = "http://localhost:7080/admin/menu"
 
@@ -311,7 +311,7 @@
             $scope.check = function() {
 
                 var body = {
-                    
+
                     adults: $scope.checkRoom.adults,
                     children: $scope.checkRoom.children
                 }
@@ -496,7 +496,7 @@
 
                             <img src="wp-content/plugins/revslider/images/transparent.png" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
-                            </li> 
+                            </li>
                         </ul>
                         <div class="tp-bannertimer"></div>
                     </div>
@@ -653,8 +653,8 @@
 
                     <script type="text/javascript">
                         /******************************************
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                					-	PREPARE PLACEHOLDER FOR SLIDER	-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                				******************************************/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                					-	PREPARE PLACEHOLDER FOR SLIDER	-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                				******************************************/
 
 
                         var setREVStartSize = function() {
@@ -853,36 +853,19 @@
                                 <div class="grid_9">
                                     <section class="md-booking">
                                         <div class="box-booking booking-inline clearfix">
-                                           
-                                        
-                                            <div class="form-group select">
-                                                <label class="label-control">Category</label>
 
-                                                <div class="booking-form select-white">
-                                                    <label class="collapse">
-														<select id="form-select" class="form-select" name="adults" ng-model="checkRoom.adults">
-															<option value="">Breakfast</option>
-															<option value="1">Desert</option>
-															<option value="2">Drinks</option>
-															<option value="3">Bar</option>
-															<option value="4">Other</option>
-														
-														</select>
-													</label>
-                                                </div>
-                                            </div>
                                             <div class="form-group select">
                                                 <label class="label-control">Price</label>
 
                                                 <div class="input-group select-white">
                                                     <label class="collapse">
-														<select class="form-select" name="childrent" ng-model="checkRoom.children">
+														<select class="form-select" name="childrent" ng-model="search.category">
 															<option value="">below 100</option>
 															<option value="1">below 500</option>
 															<option value="2">below 1000</option>
 															<option value="3">below 3000 </option>
 															<option value="4">below 5000</option>
-															
+														
 														</select>
 													</label>
                                                 </div>
@@ -901,49 +884,49 @@
                         </section>
                         </form>
                         <section class="row md-home-body">
-                          
+
                             <div class="md-body-wrapper">
-								<div class="container">
-									<div class="md-body md-blog clearfix">
-				
-										<div class="grid_10 push_1">
-											<div class="md-main">
-												
-												<div class="list-article">
-													<article class="media" ng-repeat="room in rooms">
-														<figure class="pull-left">
-															<img width="349" height="194" style="width: 349px; height: 194px;" src="{{room.img|wraps}}"
-																class="media-object wp-post-image" alt="blog-1"  /> </figure>
-														<div class="media-body" >
-															<header class="media-header">
-																<div class="meta-header">
-																	<span class="time">${{room.price}}</span>
-																	<span class="meta-divider">|</span>
-																	<p class="tags-post">
-																		Tag:{{room.category}} </p>
-																</div>
-																<h4 class="h4"><a
-																		href="vivamus-ac-nulla-accumsan-2.html">{{room.name}}</a></h4>
-																		<p class="media-content">{{room.contents}}</p>
-															</header>
-															
-														</div>
-													</article>
-												
-												</div>
-												<ul class='page-numbers'>
-													<li><span class='page-numbers current'>1</span></li>
-													<li><a class='page-numbers' href='blog/page/2/2.html'>2</a></li>
-													<li><a class="next page-numbers" href="blog/page/2/2.html">Next</a></li>
-												</ul>
-											</div>
-										</div><!-- /.md-main -->
-				
-					
-				
-									</div><!-- /.md-testimonail -->
-								</div>
-							</div>
+                                <div class="container">
+                                    <div class="md-body md-blog clearfix">
+
+                                        <div class="grid_10 push_1">
+                                            <div class="md-main">
+
+                                                <div class="list-article">
+                                                    <article class="media" ng-repeat="room in rooms |filter:search">
+                                                        <figure class="pull-left">
+                                                            <img width="349" height="194" style="width: 349px; height: 194px;" src="{{room.img|wraps}}" class="media-object wp-post-image" alt="blog-1" /> </figure>
+                                                        <div class="media-body">
+                                                            <header class="media-header">
+                                                                <div class="meta-header">
+                                                                    <span class="time">${{room.price}}</span>
+                                                                    <span class="meta-divider">|</span>
+                                                                    <p class="tags-post">
+                                                                        Tag:{{room.category}} </p>
+                                                                </div>
+                                                                <h4 class="h4"><a href="vivamus-ac-nulla-accumsan-2.html">{{room.name}}</a></h4>
+                                                                <p class="media-content">{{room.contents}}</p>
+                                                            </header>
+
+                                                        </div>
+                                                    </article>
+
+                                                </div>
+                                                <ul class='page-numbers'>
+                                                    <li><span class='page-numbers current'>1</span></li>
+                                                    <li><a class='page-numbers' href='blog/page/2/2.html'>2</a></li>
+                                                    <li><a class="next page-numbers" href="blog/page/2/2.html">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- /.md-main -->
+
+
+
+                                    </div>
+                                    <!-- /.md-testimonail -->
+                                </div>
+                            </div>
                         </section>
                 </div>
                 <!-- End md-home -->
