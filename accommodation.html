@@ -184,7 +184,6 @@
         });
         app.controller('myCtrl', function($scope, $http, ) {
             var url = "getRooms"
-
             $http.get(url).then(function(response) {
                 var data = response.data;
 
