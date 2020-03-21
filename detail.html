@@ -175,8 +175,10 @@
 			line-height: 48px;
 			letter-spacing: 6px
 		}
-		.slider-images{
-			width:100% ;height: 300px;
+
+		.slider-images {
+			width: 100%;
+			height: 300px;
 		}
 	</style>
 	<link rel='stylesheet' id='woocommerce-layout-css'
@@ -207,7 +209,7 @@
 		href='wp-content/themes/flawleshotel/assets/css/libs/magnific-popup.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='flawleshotel-css' href='wp-content/themes/flawleshotel/style.css' type='text/css'
 		media='all' />
-		<link rel='stylesheet' id='flawleshotel-font-css' href='css/style.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='flawleshotel-font-css' href='css/style.css' type='text/css' media='all' />
 	<!--[if lt IE 9]><script src="http://demo.awethemes.com/flawleshotel/wp-content/themes/flawleshotel/assets/js/html5.js"></script><![endif]-->
 	<script type='text/javascript' src='wp-includes/js/jquery/jquery.js'></script>
 	<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js'></script>
@@ -224,7 +226,8 @@
 	<meta name="generator" content="WooCommerce 2.4.8" />
 	<link rel='canonical' href='deluxe-room.html' />
 	<link rel='shortlink' href='http://demo.awethemes.com/flawleshotel/?p=143' />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 	<script type="text/javascript">
 		jQuery(document).ready(function () {
 			// CUSTOM AJAX CONTENT LOADING FUNCTION
@@ -361,7 +364,7 @@
 										href="index.html">Home</a></li>
 								<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
 										href="accommodation.html">accommodation</a></li>
-							
+
 								<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
 										href="menu.html">menu</a></li>
 								<li class="menu-item menu-item-type-post_type menu-item-object-page"><a
@@ -421,6 +424,11 @@
 				</div>
 			</nav>
 			<!-- Menu Responsive End -->
+			<div id="loader-wrapper">
+                <div class="logo"><a href="#"><span>ROYALE</span>-HC</a></div>
+                <div id="loader">
+                </div>
+            </div>
 			<div class="container">
 				<div class="md-body md-room-detail clearfix">
 					<aside class="grid_3">
@@ -458,18 +466,19 @@
 									<!-- Slider Big Image -->
 									<div id="sliderBig">
 										<ul>
-										<li class="slideshow-photo"><img class="img img-fluid" style="width:100% ;height: 700px;"
-												src="{{service.images[0]|wraps}}" alt="Deluxe Room">
-										</li>
-										<li class="slideshow-photo"><img  style="width:100% ;height: 700px;"
-											src="{{service.images[1]|wraps}}" alt="Deluxe Room">
-										</li>
-										<li class="slideshow-photo"><img  style="width:100% ;height: 700px;"
-											src="{{service.images[2]|wraps}}" alt="Deluxe Room">
-										</li>
-										<li class="slideshow-photo"><img  style="width:100% ;height: 700px;"
-											src="{{service.images[3]|wraps}}" alt="Deluxe Room">
-										</li>
+											<li class="slideshow-photo"><img class="img img-fluid"
+													style="width:100% ;height: 700px;" src="{{service.images[0]|wraps}}"
+													alt="Deluxe Room">
+											</li>
+											<li class="slideshow-photo"><img style="width:100% ;height: 700px;"
+													src="{{service.images[1]|wraps}}" alt="Deluxe Room">
+											</li>
+											<li class="slideshow-photo"><img style="width:100% ;height: 700px;"
+													src="{{service.images[2]|wraps}}" alt="Deluxe Room">
+											</li>
+											<li class="slideshow-photo"><img style="width:100% ;height: 700px;"
+													src="{{service.images[3]|wraps}}" alt="Deluxe Room">
+											</li>
 										</ul>
 									</div>
 									<!-- Slider Thumbnails -->
@@ -477,19 +486,19 @@
 										<ul>
 											<li slideindex="0"><a href="deluxe-room.html#"><img
 														style="width: 190px;height: 110px;" width="190" height="110"
-														src="{{service.images[0]|wraps}}" 
+														src="{{service.images[0]|wraps}}"
 														class="attachment-awe-room-thumb" alt="slide-5" /></a></li>
 											<li slideindex="1"><a href="deluxe-room.html#"><img width="190" height="110"
-												src="{{service.images[1]|wraps}}" 
-												style="width: 190px;height: 110px;"
+														src="{{service.images[1]|wraps}}"
+														style="width: 190px;height: 110px;"
 														class="attachment-awe-room-thumb" alt="slide-3" /></a></li>
 											<li slideindex="2"><a href="deluxe-room.html#"><img width="190" height="110"
-												style="width: 190px;height: 110px;"
-												src="{{service.images[2]|wraps}}" 
+														style="width: 190px;height: 110px;"
+														src="{{service.images[2]|wraps}}"
 														class="attachment-awe-room-thumb" alt="slide-2" /></a></li>
 											<li slideindex="3"><a href="deluxe-room.html#"><img width="190" height="110"
-												style="width: 190px;height: 110px;"
-												src="{{service.images[3]|wraps}}" 
+														style="width: 190px;height: 110px;"
+														src="{{service.images[3]|wraps}}"
 														class="attachment-awe-room-thumb" alt="slide-1" /></a></li>
 										</ul>
 									</div>
@@ -498,9 +507,10 @@
 								<div class="preview-content">
 									<div class="preview-content">
 										<p>{{service.content}}</p>
-										
+
 									</div>
-									<h3 ng-if="{{service.price}}" class="h3">Price<span class="number number-big">{{service.price}}$</h3>
+									<h3 ng-if="{{service.price}}" class="h3">Price<span
+											class="number number-big">{{service.price}}$</h3>
 								</div>
 								<footer class="post-footer clearfix">
 									<div class="footer-left">
@@ -511,7 +521,7 @@
 											<span class="meta-divider">|</span>
 											<span class="meta-view"><i class="icon icon-view"></i>0</span>
 											<span class="meta-divider">//</span>
-										
+
 											<span class="meta-divider">|</span>
 										</p>
 										<p class="tags-post">
@@ -531,8 +541,8 @@
 										<a
 											href="http://www.tumblr.com/share/link?url=http%3A%2F%2Fdemo.awethemes.com%2Fflawleshotel%2Faccommodation%2Fdeluxe-room%2F&amp;name=Deluxe+Room&amp;description=Cras+ut+turpis+neque.+Duis+dapibus+massa+justo%2C+eget+porta+urna+ultrices+sodales.+In+in+nisi+ornare%2C+pharetra+tortor+sed%2C+pellentesque+mauris.+Morbi+sed+mattis+purus%2C+vel+fringilla+nisl.+Nullam+at+justo+a+arcu+ullamcorper+lacinia+a+id+enim.+Praesent+mi+purus%2C+feugiat+a+aliquet+tempor%2C+auctor+at+est.+Aenean+ligula+felis%2C+vulputate+et+dolor+%5B%26hellip%3B%5D"><i
 												class="fa fa-tumblr-square"></i></a>
-										
-									<!-- End / Share Box -->
+
+										<!-- End / Share Box -->
 								</footer>
 
 							</div>
@@ -602,6 +612,11 @@
 	<script type='text/javascript'>
 		jQuery(document).ready(function ($) {
 			// Function date validate
+			setTimeout(function () {
+			
+			$('#loader-wrapper').hide();
+
+		  },3000)
 			function validate_date_format_mdy(string) {
 				// mm/dd/yyyy
 				var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
