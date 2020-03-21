@@ -79,6 +79,8 @@
         media='only screen and (max-width: 768px)' />
     <link rel='stylesheet' id='woocommerce-general-css' href='wp-content/plugins/woocommerce/assets/css/woocommerce.css'
         type='text/css' media='all' />
+        <link rel='stylesheet' id='flawleshotel-font-css' href='css/style.css'
+        type='text/css' media='all' />
     <link rel='stylesheet' id='flawleshotel-font-css' href='wp-content/themes/flawleshotel/assets/css/font.css'
         type='text/css' media='all' />
     <link rel='stylesheet' id='flawleshotel-fontawesome-css'
@@ -114,6 +116,7 @@
     <meta name="generator" content="WooCommerce 2.4.8" />
     <link rel='canonical' href='accommodation.html' />
     <link rel='shortlink' href='http://demo.awethemes.com/flawleshotel/?p=12' />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <script type="text/javascript">
         jQuery(document).ready(function () {
@@ -316,11 +319,16 @@
                     </ul>
                 </div>
             </nav>
+
+            <div id="loader-wrapper">
+                <div class="logo"><a href="#"><span>ROYALE</span>-HC</a></div>
+                <div id="loader">
+                </div>
+            </div>
             <!-- Menu Responsive End -->
             <div class="md-body-wrapper">
                 <section class="container">
                     <div class="md-body md-accomodation">
-
                         <section class="row md-accomodation-available clearfix">
                             <div class="grid_3">
                                 <div class="align-center">
@@ -642,6 +650,13 @@
         /* ]]> */
     </script>
     <script type='text/javascript' src='wp-content/themes/flawleshotel/assets/js/script.js'></script>
+    <script>
+        setTimeout(function () {
+			
+			$('#loader-wrapper').hide();
+
+		  },5000)
+        </script>
 
 </body>
 
