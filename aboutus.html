@@ -130,7 +130,7 @@
             var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
             app.filter('wraps', function () {
                 return function (value) {
-                    return "http://localhost:7080/images/" + value;
+                    return `${window.location.hostname}images/${value}`;;
                 };
             });
             app.controller('myCtrl', function ($scope, $http, ) {
