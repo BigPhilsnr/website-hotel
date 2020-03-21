@@ -76,6 +76,9 @@
     <link rel="Shortcut Icon" href="wp-content/uploads/2015/05/favicon1.png" type="image/x-icon" />
     <link id="font-frame-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet"
         type="text/css">
+    <link rel='stylesheet' id='woocommerce-general-css' href='wp-content/plugins/woocommerce/assets/css/woocommerce.css'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='flawleshotel-font-css' href='css/style.css' type='text/css' media='all' />
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -85,6 +88,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"
         integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
+
     <script src="js/dirPagination.js"></script>
 
     <script>
@@ -169,7 +173,8 @@
                                 href="index.html">Home</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
                                 href="accommodation.html">accommodation</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="services.html">Services</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                href="services.html">Services</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
                                 href="menu.html">menu</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
@@ -181,6 +186,11 @@
             </nav>
             <!-- Menu Responsive End -->
             <!-- Body -->
+            <div id="loader-wrapper">
+                <div class="logo"><a href="#"><span>ROYALE</span>-HC</a></div>
+                <div id="loader">
+                </div>
+            </div>
 
             <div class="md-body-wrapper">
                 <div class="container">
@@ -316,6 +326,12 @@
     <script type='text/javascript'>
         jQuery(document).ready(function ($) {
             // Function date validate
+
+            setTimeout(function () {
+			
+			$('#loader-wrapper').hide();
+
+		  },3000)
             function validate_date_format_mdy(string) {
                 // mm/dd/yyyy
                 var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
