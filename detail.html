@@ -308,7 +308,7 @@
 		var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
 		app.filter('wraps', function () {
 			return function (value) {
-				return `${window.location.hostname}images/${value}`;;
+				return `/images/${value}`;;
 			};
 		});
 
