@@ -294,7 +294,7 @@
             };
         });
         app.controller('myCtrl', function($scope, $http, ) {
-            var url = "http://localhost:7080/getRooms"
+            var url = "/getRooms"
 
             $http.get(url).then(function(response) {
                 var data = response.data;
@@ -320,7 +320,7 @@
                     children: $scope.checkRoom.children
                 }
 
-                $http.post('http://localhost:7080/checkroom', JSON.stringify(body))
+                $http.post('/checkroom', JSON.stringify(body))
                     .then(function(response) {
                         $scope.rooms = response.data.rooms;
                     })

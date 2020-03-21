@@ -286,11 +286,11 @@
         var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
         app.filter('wraps', function() {
             return function(value) {
-                return "http://localhost:7080/uploads/" + value;
+                return "/uploads/" + value;
             };
         });
         app.controller('myCtrl', function($scope, $http, ) {
-            var url = "http://localhost:7080/getRooms"
+            var url = "/getRooms"
 
             $http.get(url).then(function(response) {
                 var data = response.data;

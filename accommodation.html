@@ -231,7 +231,7 @@
                     children: $scope.checkRoom.children
                 }
 
-                $http.post('http://localhost:7080/checkroom', JSON.stringify(body))
+                $http.post('/checkroom', JSON.stringify(body))
                     .then(function (response) {
                         $scope.rooms = response.data.rooms;
                     })

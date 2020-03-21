@@ -134,7 +134,7 @@
                 };
             });
             app.controller('myCtrl', function ($scope, $http, ) {
-                var url = "http://localhost:7080/admin/getRooms"
+                var url = "/admin/getRooms"
     
                 $http.get(url).then(function (response) {
                     var data = response.data;

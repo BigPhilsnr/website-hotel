@@ -136,7 +136,7 @@
         ]);
         app.filter("wraps", function() {
             return function(value) {
-                return "http://localhost:7080/uploads/" + value;
+                return "/uploads/" + value;
             };
         });
         app.controller("myCtrl", function($scope, $http) {
@@ -148,7 +148,7 @@
             $scope.checkRoom.children = params.get("children");
             $scope.checkRoom.roomId = params.get("room");
 
-            var url = `http://localhost:7080/room?id=${$scope.checkRoom.roomId}`;
+            var url = `/room?id=${$scope.checkRoom.roomId}`;
             $scope.room = {};
 
             $http.get(url).then(function(response) {
@@ -172,7 +172,7 @@
                 };
 
                 $http
-                    .post("http://localhost:7080/admin/book", JSON.stringify(body))
+                    .post("/admin/book", JSON.stringify(body))
                     .then(function(response) {
                         toastr.success("Success", "Success", {
                             timeOut: 3000

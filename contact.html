@@ -284,7 +284,7 @@
         var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
         app.filter('wraps', function() {
             return function(value) {
-                return "http://localhost:7080/uploads/" + value;
+                return "/uploads/" + value;
             };
         });
         app.controller('myCtrl', function($scope, $http, ) {
@@ -293,7 +293,7 @@
 
             $scope.sendFeedBack = function() {
 
-                $http.post("http://localhost:7080/feedback", JSON.stringify($scope.feedBack))
+                $http.post("/feedback", JSON.stringify($scope.feedBack))
                     .then(function(response) {
                         toastr.success("Success", "Saved", {
                             timeOut: 3000

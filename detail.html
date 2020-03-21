@@ -323,7 +323,7 @@
 			};
 		});
 		app.controller('myCtrl', function ($scope, $http, ) {
-			var url = "http://localhost:7080/admin/service?id="
+			var url = "/admin/service?id="
 			$scope.service = {};
 			let params = new URLSearchParams(location.search);
 			url = url + params.get('id')
